@@ -22,5 +22,5 @@ mkdir -p /mnt/boot
 mount /dev/sda1 /mnt/boot
 swapon /dev/sda2
 
-pacstrap /mnt base linux linux-firmware
+pacstrap /mnt base base-devel linux linux-firmware intel-ucode git
 genfstab -U /mnt >> /mnt/etc/fstab
