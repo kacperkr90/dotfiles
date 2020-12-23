@@ -16,7 +16,7 @@ mkinitcpio -P
 
 passwd
 
-useradd -m kacper
+useradd -m -G wheel kacper
 passwd kacper
 
 # bootloader
