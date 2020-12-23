@@ -6,15 +6,18 @@ sed -i 's/#pl_PL.UTF-8/pl_PL.UTF-8/' /etc/locale.gen
 locale-gen
 echo 'LANG=pl_PL.UTF-8' > /etc/locale.conf
 echo 'KEYMAP=pl' > /etc/vconsole.conf
-echo 'kacper' > /etc/hostname
+echo 'arch' > /etc/hostname
 
 echo '127.0.0.1 localhost' >> /etc/hosts
 echo '::1		localhost' >> /etc/hosts
-echo '127.0.1.1	kacper.localdomain kacper' >> /etc/hosts
+echo '127.0.1.1	arch.localdomain arch' >> /etc/hosts
 
 mkinitcpio -P
 
 passwd
+
+useradd -m kacper
+passwd kacper
 
 # bootloader
 chmod u+x systemd-boot.sh
