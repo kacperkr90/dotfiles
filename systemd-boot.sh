@@ -14,5 +14,5 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-options root="LABEL=arch_os" rw
+options root="PARTLABEL=root" rw
 EOF
