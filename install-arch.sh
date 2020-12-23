@@ -20,6 +20,8 @@ mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt
 mkdir -p /mnt/boot
 mount /dev/sda1 /mnt/boot
+mkdir -p /mnt/efi
+mount /dev/sda1 /mnt/efi
 swapon /dev/sda2
 
 pacstrap /mnt base linux linux-firmware
