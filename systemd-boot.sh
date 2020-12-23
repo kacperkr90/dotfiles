@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bootctl install
+bootctl --path=/boot$esp install
 
 cat > /boot/loader/loader.conf<< EOF
 default arch.conf
