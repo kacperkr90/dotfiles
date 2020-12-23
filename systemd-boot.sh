@@ -14,5 +14,5 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /intel-ucode.img
 initrd  /initramfs-linux.img
-options root="PARTLABEL=root" rw
+options root="PARTUUID=$(blkid -s PARTUUID -o value /dev/sda3)" rw
 EOF
