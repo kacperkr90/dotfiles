@@ -7,7 +7,7 @@ timedatectl set-ntp true
 parted /dev/sda mktable gpt
 # efi
 parted /dev/sda mkpart "EFI" fat32 1MiB 1025MiB
-parted /dev/sda set 1 on
+parted /dev/sda set 1 esp on
 # swap
 parted /dev/sda mkpart "swap" linux-swap 1025MiB 5121MiB
 # root
