@@ -22,3 +22,6 @@ passwd kacper
 # bootloader
 chmod u+x systemd-boot.sh
 bash systemd-boot.sh
+
+pacman -Sy
+pacman -S git networkmanager
