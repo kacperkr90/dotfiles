@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bootctl --path=/boot  install 
+bootctl install 
 
 cat > /boot/loader/loader.conf<< EOF
 default arch.conf
