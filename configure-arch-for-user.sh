@@ -5,6 +5,7 @@ sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-
 
 # xorg
 cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf
+ln -s $HOME/.config/.xinitrc $HOME/.xinitrc
 
 # zsh
 chmod u+x zsh/zsh-setup.sh
@@ -21,5 +22,3 @@ bash slstatus/slstatus-setup.sh
 # st
 chmod u+x st/st-setup.sh
 bash st/st-setup.sh
-
-# sound
