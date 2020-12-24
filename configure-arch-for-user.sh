@@ -7,7 +7,7 @@ sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-
 cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf
 
 # zsh
-chsh -s /bin/zsh
+
 
 # dwm
 chmod u+x configure-dwm.sh
