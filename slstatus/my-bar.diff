@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 93a875a..de923d4 100644
+index 93a875a..187f60d 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -65,5 +65,8 @@ static const char unknown_str[] = "n/a";
@@ -7,8 +7,8 @@ index 93a875a..de923d4 100644
  static const struct arg args[] = {
  	/* function format          argument */
 -	{ datetime, "%s",           "%F %T" },
-+	{ uptime, "\uf30c%s | ",   NULL },
++	{ uptime, "up %s | ",   NULL },
 +	{ ram_used, "RAM: %s | ",   NULL },
-+	{ cpu_perc, "RAM: %s | ",   NULL },
++	{ cpu_perc, "CPU: %s%% | ",   NULL },
 +	{ datetime, "%s",           "%F | %T" },
  };
