@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # packages
-sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome 
+sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl 
 
 # xorg
 cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf
