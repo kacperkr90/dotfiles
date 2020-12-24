@@ -1,0 +1,11 @@
+diff --git a/config.def.h b/config.def.h
+index 93a875a..7f91f9d 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -65,5 +65,6 @@ static const char unknown_str[] = "n/a";
+  */
+ static const struct arg args[] = {
+ 	/* function format          argument */
++	{ uptime, "\uf30c %s | ",   NULL },
+ 	{ datetime, "%s",           "%F %T" },
+ };

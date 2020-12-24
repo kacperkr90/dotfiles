@@ -27,4 +27,5 @@ git apply $ST_CONFIG/my-font.diff
 
 # install
 sudo make install
+
 cd $DOTFILES_DIR
