@@ -12,6 +12,7 @@ fi
 # create soft links to dot files
 ln -s $ZSH_CONFIG_DIR/.zshrc $HOME/.zshrc
 ln -s $ZSH_CONFIG_DIR/.zprofile $HOME/.zprofile
+ln -s $ZSH_CONFIG_DIR/.aliases $HOME/.aliases
 
 # change shell
 chsh -s /bin/zsh

@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# common
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias vi=nvim
+
+# git
+alias g='git'
+alias glog='g log --oneline'
+alias gl='g pull'
+alias gst='g status'
+alias gco='g checkout'
+alias gcm='gco master'
+alias gc='g commit'
+alias gcns='gc --no-status'
+alias gcans='gcns --amend'
+alias gb='g branch'
+alias grb='g rebase'
+alias grbi='grb -i'
+alias grbc='grb --continue'
+alias gr='g reset'
+alias grh='gr --hard'
+alias grs='gr --soft'
+alias gp='g push'
+alias gpm='gp origin master'
+alias ga='g add'
+
+# mvn
+alias mc='./mvnw clean'
+alias mcp='mc package'
+alias mci='mcp -Dmaven.test.skip=true'
+
+# gradle wrapper
+alias gw='./gradlew'
+alias gwc='gw clean'
+alias gwa='gw assemble'
+alias gwb='gw build'
+alias gwca='gwc assemble'
+alias gwcb='gwc build'
+
+# docker goodies
+alias kafka-start='docker network create app-tier --driver bridge && \ 
+	docker run -d --name zookeeper-server --network app-tier -e ALLOW_ANONYMOUS_LOGIN=yes bitnami/zookeeper:latest && \
+	docker run -d --name kafka-server --network app-tier -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181 -e KAFKA_BROKER_ID=1 -e KAFKA_LISTENERS=PLAINTEXT://:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092 -p 9092:9092 bitnami/kafka:latest'
+alias kafka-stop='docker stop zookeeper-server && docker rm zookeeper-server && docker stop kafka-server && docker rm kafka-server'
+alias kp='docker exec -it kafka-server /opt/bitnami/kafka/bin/kafka-console-producer.sh --bootstrap-server localhost:9092'

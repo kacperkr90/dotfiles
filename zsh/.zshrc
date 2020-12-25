@@ -1,3 +1,9 @@
+if [[ -a "$HOME/.aliases_work" ]]; then
+  source $HOME/.aliases_work
+fi
+
+source $HOME/.aliases
+
 autoload -Uz compinit promptinit
 compinit
 promptinit
