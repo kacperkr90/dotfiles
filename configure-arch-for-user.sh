@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DOTFILES_DIR=$HOME/.config/dotfiles
+
 # packages
 
 sudo pacman -S git \ 
@@ -17,7 +19,7 @@ sudo pacman -S git \
 
 # xorg
 cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf.d/
-ln -s $HOME/.config/dotfiles/.xinitrc $HOME/.xinitrc
+ln -s $DOTFILES_DIR/.xinitrc $HOME/.xinitrc
 
 # picom
 chmod u+x picom/picom-setup.sh
@@ -42,3 +44,11 @@ bash st/st-setup.sh
 # wmname
 chmod u+x wmname-setup.sh
 bash wmname-setup.sh
+
+# slack
+mkdir -p $HOME/dev/arch
+git clone https://aur.archlinux.org/slack-desktop.git $HOME
+cd $HOME/slack-desktop
+makepkg -si
+cd $DOTFILES_DIR
+rm -rfv $HOME/slack-desktop
