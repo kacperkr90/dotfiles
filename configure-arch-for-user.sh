@@ -7,6 +7,7 @@ sudo pacman -S git \
 	zsh \
 	alsa-utils \
 	ttf-font-awesome \
+	ttf-ms-fonts \
 	adobe-source-code-pro-fonts \
 	curl \
 	dmenu \
@@ -27,8 +28,8 @@ chmod u+x zsh/zsh-setup.sh
 bash zsh/zsh-setup.sh
 
 # dwm
-chmod u+x dwm-setup.sh
-bash dwm-setup.sh
+chmod u+x dwm/dwm-setup.sh
+bash dwm/dwm-setup.sh
 
 # slstatus
 chmod u+x slstatus/slstatus-setup.sh
@@ -37,3 +38,7 @@ bash slstatus/slstatus-setup.sh
 # st
 chmod u+x st/st-setup.sh
 bash st/st-setup.sh
+
+# wmname
+chmod u+x wmname-setup.sh
+bash wmname-setup.sh

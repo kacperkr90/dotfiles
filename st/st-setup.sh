@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 CONFIG_DIR=$HOME/.config
 ST_DIR=$CONFIG_DIR/st
