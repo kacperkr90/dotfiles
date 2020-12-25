@@ -1,11 +1,26 @@
 #!/bin/bash
 
 # packages
-sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl dmenu
+
+sudo pacman -S git \ 
+	xorg xorg-xinit \
+	zsh \
+	alsa-utils \
+	ttf-font-awesome \
+	adobe-source-code-pro-fonts \
+	curl \
+	dmenu \
+	picom \
+	feh \
+	htop
 
 # xorg
 cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf.d/
 ln -s $HOME/.config/dotfiles/.xinitrc $HOME/.xinitrc
+
+# picom
+chmod u+x picom/picom-setup.sh
+bash picom/picom-setup.sh
 
 # zsh
 chmod u+x zsh/zsh-setup.sh

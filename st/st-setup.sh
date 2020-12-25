@@ -17,8 +17,10 @@ fi
 cd $ST_DIR
 
 # solarized theme
+curl -O https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff
 curl -O https://st.suckless.org/patches/solarized/st-no_bold_colors-0.8.1.diff
 curl -O https://st.suckless.org/patches/solarized/st-solarized-dark-20180411-041912a.diff
+git apply st-alpha-0.8.2.diff
 git apply st-no_bold_colors-0.8.1.diff
 git apply st-solarized-dark-20180411-041912a.diff
 
