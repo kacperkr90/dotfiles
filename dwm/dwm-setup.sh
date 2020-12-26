@@ -14,6 +14,9 @@ if [ ! -d "$DWM_DIR" ]; then
   git clone https://git.suckless.org/dwm $DWM_DIR
 fi
 
-cd dwm
+cd $DWM_DIR
+
+git apply $DWM_CONFIG/my-changes.diff
 sudo make install
-cd ..
+
+cd $DOTFILES_DIR
