@@ -1,0 +1,5 @@
+super + shift + f
+	firefox
+
+super + alt + {j,k,m}
+	amixer set Master {5%-,5%+,toggle}
