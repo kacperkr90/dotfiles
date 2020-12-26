@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CONFIG_DIR=$HOME/.config
-DWM_DIR=$CONFIG_DIR/dwm
+DWM_DIR=$HOME/apps/suckless/dwm
 DOTFILES_DIR=$CONFIG_DIR/dotfiles
 DWM_CONFIG=$DOTFILES_DIR/dwm
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CONFIG_DIR=$HOME/.config
-SLSTATUS_DIR=$CONFIG_DIR/slstatus
+SLSTATUS_DIR=$HOME/apps/suckless/slstatus
 DOTFILES_DIR=$CONFIG_DIR/dotfiles
 SLSTATUS_CONFIG=$DOTFILES_DIR/slstatus
 

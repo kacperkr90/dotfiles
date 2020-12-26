@@ -2,7 +2,7 @@ diff --git a/config.def.h b/config.def.h
 index 93a875a..187f60d 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -65,5 +65,8 @@ static const char unknown_str[] = "n/a";
+@@ -65,5 +65,9 @@ static const char unknown_str[] = "n/a";
   */
  static const struct arg args[] = {
  	/* function format          argument */
@@ -10,5 +10,6 @@ index 93a875a..187f60d 100644
 +	{ uptime, "up %s | ",   NULL },
 +	{ ram_used, "RAM: %s | ",   NULL },
 +	{ cpu_perc, "CPU: %s%% | ",   NULL },
-+	{ datetime, "%s",           "%F | %T" },
++	{ run_command, "\uf028: %s% | ",   "awk -F\"[][]\" '/Left:/ { print $2 }' <(amixer sget Master)" },
++	{ datetime, "\uf073 %s",  "%F | %T " },
  };
