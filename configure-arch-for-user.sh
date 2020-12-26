@@ -19,7 +19,9 @@ sudo pacman -S git \
 	firefox \
 	i3lock \
 	xautolock \
-	htop
+	htop \
+	firefox \
+	discord
 
 # xorg
 cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf.d/
@@ -63,6 +65,13 @@ git clone https://aur.archlinux.org/intellij-idea-ultimate-edition.git $AUR_DIR/
 cd $AUR_DIR/intellij-idea
 makepkg -si
 
+## google-chrome
+git clone https://aur.archlinux.org/google-chrome.git $AUR_DIR/google-chrome
+cd $AUR_DIR/google-chrome
+makepkg -si
+
+
+cd $DOTFILES_DIR
 # keybinds
 chmod u+x sxhkd/sxhkd-setup.sh
 bash sxhkd/sxhkd-setup.sh

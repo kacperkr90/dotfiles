@@ -6,3 +6,6 @@ super + alt + {j,k,m}
 	
 control + alt + l
 	i3lock
+
+super + alt + c
+	google-chrome-stable
