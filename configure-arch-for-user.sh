@@ -17,6 +17,8 @@ sudo pacman -S git \
 	feh \
 	sxhkd \
 	firefox \
+	i3lock \
+	xautolock \
 	htop
 
 # xorg

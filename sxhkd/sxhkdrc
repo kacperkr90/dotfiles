@@ -3,3 +3,6 @@ super + shift + f
 
 super + alt + {j,k,m}
 	amixer set Master {5%-,5%+,toggle}
+	
+control + alt + l
+	i3lock
