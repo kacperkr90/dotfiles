@@ -15,6 +15,8 @@ sudo pacman -S git \
 	dmenu \
 	picom \
 	feh \
+	sxhkd \
+	firefox \
 	htop
 
 # xorg
@@ -45,10 +47,20 @@ bash st/st-setup.sh
 chmod u+x wmname-setup.sh
 bash wmname-setup.sh
 
-# slack
-mkdir -p $HOME/dev/arch
-git clone https://aur.archlinux.org/slack-desktop.git $HOME
-cd $HOME/slack-desktop
+# aur
+AUR_DIR=$HOME/apps/AUR
+mkdir -p $HOME/apps/AUR
+
+## slack
+git clone https://aur.archlinux.org/slack-desktop.git $AUR_DIR/slack-desktop
+cd $AUR_DIR/slack-desktop
 makepkg -si
-cd $DOTFILES_DIR
-rm -rfv $HOME/slack-desktop
+
+## intellij-idea
+git clone https://aur.archlinux.org/intellij-idea-ultimate-edition.git $AUR_DIR/intellij-idea
+cd $AUR_DIR/intellij-idea
+makepkg -si
+
+# keybinds
+chmod u+x sxhkd/sxhkd-setup.sh
+bash sxhkd/sxhkd-setup.sh
