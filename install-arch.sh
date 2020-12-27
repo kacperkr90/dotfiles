@@ -16,6 +16,8 @@ parted /dev/sda mkpart "root" ext4 5121MiB 100%
 mkfs.vfat -F32 /dev/sda1
 mkswap /dev/sda2
 mkfs.ext4 /dev/sda3
+# encrypt
+cryptsetup luksFormat /dev/sda3
 # mount
 mount /dev/sda3 /mnt
 mkdir -p /mnt/boot

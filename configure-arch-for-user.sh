@@ -21,7 +21,8 @@ sudo pacman -S git \
 	xautolock \
 	htop \
 	firefox \
-	discord
+	discord \
+	keepassxc
 
 # xorg
 cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf.d/
