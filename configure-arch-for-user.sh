@@ -4,53 +4,37 @@ DOTFILES_DIR=$HOME/.config/dotfiles
 
 # packages
 
-sudo pacman -S git \ 
-	xorg xorg-xinit \
-	zsh \
-	alsa-utils \
-	ttf-font-awesome \
-	ttf-ms-fonts \
-	adobe-source-code-pro-fonts \
-	curl \
-	dmenu \
-	picom \
-	feh \
-	sxhkd \
-	firefox \
-	i3lock \
-	xautolock \
-	htop \
-	firefox \
-	discord \
-	keepassxc
+sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl dmenu picom feh sxhkd firefox i3lock xautolock htop firefox discord keepassxc
+
+read -p "Press enter to continue"
 
 # xorg
-cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf.d/
+sudo cp /usr/share/X11/xorg.conf.d/* /etc/X11/xorg.conf.d/
 ln -s $DOTFILES_DIR/.xinitrc $HOME/.xinitrc
 
 # picom
 chmod u+x picom/picom-setup.sh
-bash picom/picom-setup.sh
+./picom/picom-setup.sh
 
 # zsh
 chmod u+x zsh/zsh-setup.sh
-bash zsh/zsh-setup.sh
+./zsh/zsh-setup.sh
 
 # dwm
 chmod u+x dwm/dwm-setup.sh
-bash dwm/dwm-setup.sh
+./dwm/dwm-setup.sh
 
 # slstatus
 chmod u+x slstatus/slstatus-setup.sh
-bash slstatus/slstatus-setup.sh
+./slstatus/slstatus-setup.sh
 
 # st
 chmod u+x st/st-setup.sh
-bash st/st-setup.sh
+./st/st-setup.sh
 
 # wmname
 chmod u+x wmname-setup.sh
-bash wmname-setup.sh
+./wmname-setup.sh
 
 # aur
 AUR_DIR=$HOME/apps/AUR
@@ -75,4 +59,4 @@ makepkg -si
 cd $DOTFILES_DIR
 # keybinds
 chmod u+x sxhkd/sxhkd-setup.sh
-bash sxhkd/sxhkd-setup.sh
+./sxhkd/sxhkd-setup.sh

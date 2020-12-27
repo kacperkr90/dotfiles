@@ -8,21 +8,18 @@ parted /dev/sda mktable gpt
 # efi
 parted /dev/sda mkpart "EFI" fat32 1MiB 1025MiB
 parted /dev/sda set 1 esp on
-# swap
-parted /dev/sda mkpart "swap" linux-swap 1025MiB 5121MiB
 # root
-parted /dev/sda mkpart "root" ext4 5121MiB 100%
+parted /dev/sda mkpart "root" ext4 1025MiB 100%
+# encrypt
+cryptsetup luksFormat /dev/sda2
+cryptsetup luksOpen /dev/sda2 luks
 # format
 mkfs.vfat -F32 /dev/sda1
-mkswap /dev/sda2
-mkfs.ext4 /dev/sda3
-# encrypt
-cryptsetup luksFormat /dev/sda3
+mkfs.ext4 /dev/mapper/luks
 # mount
-mount /dev/sda3 /mnt
+mount /dev/mapper/luks /mnt
 mkdir -p /mnt/boot
 mount /dev/sda1 /mnt/boot
-swapon /dev/sda2
 
-pacstrap /mnt base base-devel linux linux-firmware intel-ucode
+pacstrap /mnt base base-devel linux linux-firmware intel-ucode nano
 genfstab -U /mnt >> /mnt/etc/fstab
