@@ -4,7 +4,7 @@ DOTFILES_DIR=$HOME/.config/dotfiles
 
 # packages
 
-sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl dmenu xcompmgr feh sxhkd firefox i3lock xautolock htop firefox discord keepassxc jdk8-openjdk jdk11-openjdk bc arandr sxiv neovim pulseaudio-alsa pulsemixer pamixer unrar unzip openssh docker
+sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl dmenu xcompmgr feh sxhkd firefox i3lock xautolock htop firefox discord keepassxc jdk8-openjdk jdk11-openjdk bc arandr sxiv neovim pulseaudio-alsa pulsemixer pamixer unrar unzip openssh docker fzf openvpn
 
 read -p "Press enter to continue"
 
@@ -13,6 +13,7 @@ sudo gpasswd -a $USER docker
 
 # enable & start services
 systemctl enable --now docker.service
+systemctl enable --now openvpn-client@configuration.service
 
 # xorg
 sudo 
@@ -66,5 +67,10 @@ makepkg -si
 git clone https://aur.archlinux.org/lf-git.git $AUR_DIR/lf-git
 cd $AUR_DIR/lf-git
 makepkg -si
+
+git clone https://aur.archlinux.org/openvpn-update-systemd-resolved.git $AUR_DIR/openvpn-update-systemd-resolved
+cd $AUR_DIR/openvpn-update-systemd-resolved
+makepkg -si
+systemctl enable --now systemd-resolved.service
 
 cd $DOTFILES_DIR

@@ -1,4 +1,4 @@
-super + shift + f
+super + alt + f
 	firefox
 
 super + alt + {j,k,m}
@@ -7,8 +7,8 @@ super + alt + {j,k,m}
 control + alt + l
 	i3lock
 
-super + shift + c
+super + alt + c
 	google-chrome-stable
 
-super + shift + a
+super + alt + a
 	arandr
