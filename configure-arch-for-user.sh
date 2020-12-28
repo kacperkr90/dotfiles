@@ -4,7 +4,7 @@ DOTFILES_DIR=$HOME/.config/dotfiles
 
 # packages
 
-sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl dmenu xcompmgr feh sxhkd firefox i3lock xautolock htop firefox discord keepassxc jdk8-openjdk jdk11-openjdk bc lf-git arandr sxiv neovim pulseaudio-alsa pulsemixer pamixer unrar unzip openssh docker
+sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl dmenu xcompmgr feh sxhkd firefox i3lock xautolock htop firefox discord keepassxc jdk8-openjdk jdk11-openjdk bc arandr sxiv neovim pulseaudio-alsa pulsemixer pamixer unrar unzip openssh docker
 
 read -p "Press enter to continue"
 
@@ -60,6 +60,11 @@ makepkg -si
 ## google-chrome
 git clone https://aur.archlinux.org/google-chrome.git $AUR_DIR/google-chrome
 cd $AUR_DIR/google-chrome
+makepkg -si
+
+## lf
+git clone https://aur.archlinux.org/lf-git.git $AUR_DIR/lf-git
+cd $AUR_DIR/lf-git
 makepkg -si
 
 cd $DOTFILES_DIR
