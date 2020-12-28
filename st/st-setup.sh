@@ -6,13 +6,8 @@ DOTFILES_DIR=$CONFIG_DIR/dotfiles
 ST_CONFIG=$DOTFILES_DIR/st
 
 # ensure that directories exists
-if [ ! -d "$CONFIG_DIR/" ]; then
-  mkdir -p $CONFIG_DIR
-fi
-
-if [ ! -d "$ST_DIR" ]; then
-  git clone https://git.suckless.org/st $ST_DIR
-fi
+[ ! -d "$CONFIG_DIR/" ] && mkdir -p $CONFIG_DIR
+[ ! -d "$ST_DIR" ] && git clone https://git.suckless.org/st $ST_DIR
 
 cd $ST_DIR
 

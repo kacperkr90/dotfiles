@@ -6,13 +6,8 @@ DOTFILES_DIR=$CONFIG_DIR/dotfiles
 SLSTATUS_CONFIG=$DOTFILES_DIR/slstatus
 
 # ensure that directories exists
-if [ ! -d "$CONFIG_DIR/" ]; then
-  mkdir -p $CONFIG_DIR
-fi
-
-if [ ! -d "$SLSTATUS_DIR" ]; then
-  git clone https://git.suckless.org/slstatus $SLSTATUS_DIR
-fi
+[ ! -d "$CONFIG_DIR/" ] && mkdir -p $CONFIG_DIR
+[ ! -d "$SLSTATUS_DIR" ] && git clone https://git.suckless.org/slstatus $SLSTATUS_DIR
 
 cd $SLSTATUS_DIR
 

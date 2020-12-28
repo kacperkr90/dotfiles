@@ -5,9 +5,7 @@ DOTFILES_DIR=$CONFIG_DIR/dotfiles
 ZSH_CONFIG_DIR=$DOTFILES_DIR/zsh
 
 # ensure that directories exists
-if [ ! -d "$CONFIG_DIR/" ]; then
-  mkdir -p $CONFIG_DIR
-fi
+[ ! -d "$CONFIG_DIR/" ] && mkdir -p $CONFIG_DIR
 
 # create soft links to dot files
 ln -s $ZSH_CONFIG_DIR/.zshrc $HOME/.zshrc

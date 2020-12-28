@@ -10,6 +10,6 @@ index 93a875a..187f60d 100644
 +	{ uptime, " up %s | ",   NULL },
 +	{ ram_used, "RAM: %s | ",   NULL },
 +	{ cpu_perc, "CPU: %s%% | ",   NULL },
-+	{ run_command, "\uf028 %s | ",   "awk -F\"[][]\" '/Left:/ { print $2 }' <(amixer sget Master)" },
++	{ run_command, "\uf028 %s%% | ",   "pamixer --get-volume" },
 +	{ datetime, "\uf073 %s",  "%F | %T " },
  };

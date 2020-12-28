@@ -1,8 +1,6 @@
-if [[ -a "$HOME/.aliases_work" ]]; then
-  source $HOME/.aliases_work
-fi
+[ -f "$HOME/.aliases_work" ] && source $HOME/.aliases_work
 
-source $HOME/.aliases
+[ -f "$HOME/.aliases" ] && source $HOME/.aliases
 
 autoload -Uz compinit promptinit
 compinit
@@ -14,4 +12,5 @@ prompt walters
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-zstyle ':completion:*' menu select
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh

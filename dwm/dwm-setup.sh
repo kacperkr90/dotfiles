@@ -6,13 +6,8 @@ DOTFILES_DIR=$CONFIG_DIR/dotfiles
 DWM_CONFIG=$DOTFILES_DIR/dwm
 
 # ensure that directories exists
-if [ ! -d "$CONFIG_DIR/" ]; then
-  mkdir -p $CONFIG_DIR
-fi
-
-if [ ! -d "$DWM_DIR" ]; then
-  git clone https://git.suckless.org/dwm $DWM_DIR
-fi
+[ ! -d "$CONFIG_DIR/" ] && mkdir -p $CONFIG_DIR
+[ ! -d "$DWM_DIR" ] && git clone https://git.suckless.org/dwm $DWM_DIR
 
 cd $DWM_DIR
 
