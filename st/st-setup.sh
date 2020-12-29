@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CONFIG_DIR=$HOME/.config
-ST_DIR=$CONFIG_DIR/st
+ST_DIR=$HOME/apps/suckless/st
 DOTFILES_DIR=$CONFIG_DIR/dotfiles
 ST_CONFIG=$DOTFILES_DIR/st
 

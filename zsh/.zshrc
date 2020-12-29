@@ -2,12 +2,13 @@
 
 [ -f "$HOME/.aliases" ] && source $HOME/.aliases
 
+fpath=("$HOME/.zprompts" "$fpath[@]")
 autoload -Uz compinit promptinit
 compinit
 promptinit
 
 # This will set the default prompt to the walters theme
-prompt walters
+prompt agnoster
 
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
