@@ -22,7 +22,7 @@ index 1c0b587..16bde50 100644
  
  static const Rule rules[] = {
  	/* xprop(1):
-@@ -27,8 +27,11 @@ static const Rule rules[] = {
+@@ -27,8 +27,13 @@ static const Rule rules[] = {
  	 *	WM_NAME(STRING) = title
  	 */
  	/* class      instance    title       tags mask     isfloating   monitor */
@@ -33,6 +33,8 @@ index 1c0b587..16bde50 100644
 +	{ "Slack",    		NULL,       NULL,       1 << 3,       0,      -1 },
 +	{ "discord",  		NULL,       NULL,       1 << 3,       0,      -1 },
 +	{ "Google-chrome",  NULL, 		NULL,       1 << 3,       0,      -1 },
++	{ "jetbrains-idea",  NULL, 		NULL,       1 << 1,       0,      -1 },
++	{ "KeePassXC",  NULL, 		NULL,       1 << 4,       0,      -1 },
  };
  
  /* layout(s) */

@@ -41,8 +41,8 @@ chmod u+x st/st-setup.sh
 ./st/st-setup.sh
 
 # wmname
-chmod u+x wmname-setup.sh
-./wmname-setup.sh
+chmod u+x $DOTFILES_DIR/wmname-setup.sh
+./$DOTFILES_DIR/wmname-setup.sh
 
 # aur
 AUR_DIR=$HOME/apps/AUR
