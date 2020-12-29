@@ -12,3 +12,6 @@ super + alt + c
 
 super + alt + a
 	arandr
+
+super + shift + l
+	st -e lf

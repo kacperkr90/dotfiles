@@ -15,3 +15,6 @@ HISTFILE=~/.zsh_history
 
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+
+export EDITOR=nvim
+export XDG_CONFIG_HOME=~/.config
