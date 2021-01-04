@@ -7,11 +7,14 @@ super + alt + {j,k,m}
 control + alt + l
 	i3lock
 
-super + alt + c
-	google-chrome-stable
+super + shift + g 
+	google-chrome-stable -e $STANDUP_LINK
 
-super + alt + a
+super + shift + a
 	arandr
 
 super + shift + l
 	st -e lf
+
+super + shift + v
+	st -e sudo openvpn --config $HOME/client.ovpn
