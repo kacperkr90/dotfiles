@@ -1,0 +1,16 @@
+set clipboard+=unnamedplus
+set visualbell
+set noerrorbells
+set hightlightedyank
+set ignorecase
+set smartcase
+
+let mapleader = "\"
+:map <leader>d <Action>(Debug)
+:map <leader>r <Action>(ReformatCode)
+:map <leader>s <Action>(Stop)
+:map <leader>b <Action>(Back)
+:map <leader>f <Action>(Forward)
+:map <leader><Tab> <Action>(TogglePresentationMode)
+
+" map VimMotionMethodBackwardEnd VimMotionMethodBackwardStart VimMotionMethodForwardEnd VimMotionMethodForwardStart

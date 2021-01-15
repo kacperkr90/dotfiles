@@ -17,3 +17,6 @@ HIST_IGNORE_ALL_DUPS=true
 
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+
+GPG_TTY=$(tty)
+export GPG_TTY
