@@ -10,17 +10,11 @@ control + alt + l
 super + shift + g 
 	google-chrome-stable -e $STANDUP_LINK
 
-super + shift + a
-	arandr
-
 super + shift + l
 	st -e lf
 
 super + shift + v
 	st -e sudo openvpn --config $HOME/client.ovpn
-
-super + shift + n
-	st -e mw -y kacper.krycki@bms.com.pl
 
 super + shift + m
 	st -e neomutt
@@ -29,4 +23,7 @@ super + shift + s
 	screenkey
 
 super + shift + p
-	postman
+	st -e ncmpcpp
+
+super + shift + n 
+	st -e newsboat 
