@@ -8,22 +8,22 @@ control + alt + l
 	i3lock
 
 super + shift + g 
-	google-chrome-stable -e $STANDUP_LINK
+	$BROWSER -e $STANDUP_LINK
 
 super + shift + l
-	st -e lf
+	$TERMINAL -e lf
 
 super + shift + v
-	st -e sudo openvpn --config $HOME/client.ovpn
+	$TERMINAL -e sudo openvpn --config $HOME/client.ovpn
 
 super + shift + m
-	st -e neomutt
+	$TERMINAL -e neomutt
 	
 super + shift + s
 	screenkey
 
 super + shift + p
-	st -e ncmpcpp
+	$TERMINAL -e ncmpcpp
 
 super + shift + n 
-	st -e newsboat 
+	$TERMINAL -e newsboat 

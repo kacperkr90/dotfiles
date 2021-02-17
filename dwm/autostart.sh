@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 wmname compiz &
-firefox &
+brave &
 intellij-idea-ultimate-edition &
 slack &
 keepassxc &
