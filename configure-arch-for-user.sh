@@ -69,9 +69,15 @@ cd $AUR_DIR/lf-git
 makepkg -si
 mkdir -p $HOME/.config/lf && ln -sf $DOTFILES_DIR/lfrc $HOME/.config/lf/
 
+## systemd-resolved
 git clone https://aur.archlinux.org/openvpn-update-systemd-resolved.git $AUR_DIR/openvpn-update-systemd-resolved
 cd $AUR_DIR/openvpn-update-systemd-resolved
 makepkg -si
 systemctl enable --now systemd-resolved.service
+
+## brave-bin
+git clone https://aur.archlinux.org/brave-bin.git $AUR_DIR/brave-bin
+cd $AUR_DIR/brave-bin
+makepkg -si
 
 cd $DOTFILES_DIR
