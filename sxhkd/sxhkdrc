@@ -5,7 +5,7 @@ super + alt + {j,k,m}
 	pamixer -{d 5,i 5,t}
 	
 control + alt + l
-	i3lock
+	slock
 
 super + shift + g 
 	$BROWSER -e $STANDUP_LINK
