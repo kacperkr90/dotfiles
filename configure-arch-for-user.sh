@@ -4,7 +4,7 @@ DOTFILES_DIR=$HOME/.config/dotfiles
 
 # packages
 
-sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl dmenu xcompmgr feh sxhkd firefox slock xautolock htop firefox discord keepassxc jdk8-openjdk jdk11-openjdk bc arandr sxiv neovim pulseaudio-alsa pulsemixer pamixer unrar unzip openssh docker fzf openvpn zathura zathura-pdf-mupdf lynx libreoffice-still p7zip newsboat
+sudo pacman -S git xorg xorg-xinit zsh alsa-utils ttf-font-awesome adobe-source-code-pro-fonts curl dmenu xcompmgr feh sxhkd firefox slock xautolock htop firefox discord keepassxc jdk8-openjdk jdk11-openjdk bc arandr sxiv neovim pulseaudio-alsa pulsemixer pamixer unrar unzip openssh docker fzf openvpn zathura zathura-pdf-mupdf lynx libreoffice-still p7zip newsboat udisks2
 
 read -p "Press enter to continue"
 
