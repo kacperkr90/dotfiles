@@ -8,6 +8,6 @@ exec slstatus &
   mpd &
   mpc update &
   setxkbmap pl &
-  xautolock -time 3 -locker i3lock &
+  xautolock -time 3 -locker slock &
   sxhkd &
   dwm
