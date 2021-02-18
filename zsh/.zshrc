@@ -1,6 +1,6 @@
 [ -f "$HOME/.aliases_work" ] && source $HOME/.aliases_work
 
-[ -f "$HOME/.aliases" ] && source $HOME/.aliases
+[ -f "$DOTFILES_DIR/zsh/.aliases" ] && source $DOTFILES_DIR/zsh/.aliases
 
 fpath=("$HOME/.zprompts" "$fpath[@]")
 autoload -Uz compinit promptinit

@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# dirs
+alias d="cd $XDG_CONFIG_HOME/dotfiles"
+
 # common
+alias aa="nvim $XDG_CONFIG_HOME/dotfiles/zsh/.aliases"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -47,9 +51,3 @@ alias kafka-start='docker network create app-tier --driver bridge && \
 	docker run -d --name kafka-server --network app-tier -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181 -e KAFKA_BROKER_ID=1 -e KAFKA_LISTENERS=PLAINTEXT://:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092 -p 9092:9092 bitnami/kafka:latest'
 alias kafka-stop='docker stop zookeeper-server && docker rm zookeeper-server && docker stop kafka-server && docker rm kafka-server'
 alias kp='docker exec -it kafka-server /opt/bitnami/kafka/bin/kafka-console-producer.sh --bootstrap-server localhost:9092'
-
-# functions
-live() {
-    local format=$([[ -z "$2" ]] && echo "301" || echo "$2")
-    ffmpeg -i "$(youtube-dl -f "$2" -g "$1")" -c copy "$(youtube-dl -e "$1").ts"
-}
