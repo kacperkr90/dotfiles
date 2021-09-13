@@ -5,9 +5,9 @@ ln -sf /usr/share/zoneinfo/Poland /etc/localtime
 hwclock --systohc
 
 #locale 
-sed -i 's/#en_GB.UTF-8/en_GB.UTF-8/' /etc/locale.gen
+sed -i 's/#pl_PL.UTF-8/pl_PL.UTF-8/' /etc/locale.gen
 locale-gen
-echo 'LANG=en_GB.UTF-8' > /etc/locale.conf
+echo 'LANG=pl_PL.UTF-8' > /etc/locale.conf
 echo 'KEYMAP=pl' > /etc/vconsole.conf
 
 echo 'arch' > /etc/hostname
@@ -20,8 +20,8 @@ mkinitcpio -P
 
 passwd
 
-useradd -m -G wheel kacper
-passwd kacper
+useradd -m -G wheel joan
+passwd joan
 
 # bootloader
 chmod u+x systemd-boot.sh
