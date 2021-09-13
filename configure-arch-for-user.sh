@@ -10,6 +10,13 @@ sudo pacman -S git xorg zsh plasma kde-applications aegisub lxsplit libreoffice-
 chmod u+x zsh/zsh-setup.sh
 ./zsh/zsh-setup.sh
 
-systemctl enable sddm.service
+# aur
+AUR_DIR=$HOME/apps/AUR
+mkdir -p $HOME/apps/AUR
+
+## slack
+git clone https://aur.archlinux.org/nvidia-390xx-utils.git $AUR_DIR/nvidia-390xx-utils
+cd $AUR_DIR/nvidia-390xx-utils
+makepkg -si
 
 cd $DOTFILES_DIR
