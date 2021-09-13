@@ -4,7 +4,7 @@ DOTFILES_DIR=$HOME/.config/dotfiles
 
 # packages
 
-sudo pacman -S git xorg zsh plasma-desktop kde-applications aegisub lxsplit libreoffice-fresh thunderbird thunderbird-i18n-pl vlc mpv qbittorrent discord
+sudo pacman -S git xorg zsh plasma kde-applications aegisub lxsplit libreoffice-fresh thunderbird thunderbird-i18n-pl vlc mpv qbittorrent discord
 
 # zsh
 chmod u+x zsh/zsh-setup.sh
