@@ -1,9 +1,9 @@
 set clipboard+=unnamedplus
 set visualbell
 set noerrorbells
-set hightlightedyank
 set ignorecase
 set smartcase
+set number
 
 let mapleader = "\"
 :map <leader>d <Action>(Debug)

@@ -2,7 +2,7 @@
 
 wmname compiz &
 brave &
-intellij-idea-ultimate-edition &
+#intellij-idea-ultimate-edition &
 slack &
 keepassxc &
 st &
