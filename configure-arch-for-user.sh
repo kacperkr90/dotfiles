@@ -10,6 +10,7 @@ sudo pacman -S git xorg zsh plasma kde-applications aegisub lxsplit libreoffice-
 chmod u+x zsh/zsh-setup.sh
 ./zsh/zsh-setup.sh
 
+echo 'Installing AURs...'
 # aur
 AUR_DIR=$HOME/apps/AUR
 mkdir -p $HOME/apps/AUR
