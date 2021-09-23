@@ -14,5 +14,5 @@ title Arch Linux
 linux /vmlinuz-linux
 initrd /intel-ucode.img
 initrd /initramfs-linux.img
-options cryptdevice=PARTUUID=$(blkid -s PARTUUID -o value /dev/sda2):luks root=/dev/mapper/luks rw
+options cryptdevice=PARTUUID=$(blkid -s PARTUUID -o value /dev/nvme0n1p2):luks root=/dev/mapper/luks rw
 EOF
